@@ -1,0 +1,26 @@
+{
+  "name": "schemeseva",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start-backend": "node backend-monitor.js",
+    "start-automated-backend": "node start-automated-backend.js",
+    "start-frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm:start-backend\" \"npm:start-frontend\"",
+    "dev-automated": "concurrently \"npm:start-automated-backend\" \"npm:start-frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.3"
+  }
+}

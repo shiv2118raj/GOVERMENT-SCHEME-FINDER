@@ -1,0 +1,103 @@
+version: "3.1"
+
+stories:
+
+- story: greet and ask for income schemes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_income_schemes
+  - action: action_recommend_income_schemes
+
+- story: direct income scheme query
+  steps:
+  - intent: ask_income_schemes
+  - action: action_recommend_income_schemes
+
+- story: ask for documents
+  steps:
+  - intent: ask_documents
+  - action: utter_documents_general
+
+- story: ask about eligibility
+  steps:
+  - intent: ask_eligibility
+  - action: utter_eligibility_info
+
+- story: ask about application process
+  steps:
+  - intent: ask_application_process
+  - action: utter_application_process
+
+- story: ask about education schemes
+  steps:
+  - intent: ask_education_schemes
+  - action: utter_education_schemes
+
+- story: ask about health schemes
+  steps:
+  - intent: ask_health_schemes
+  - action: utter_health_schemes
+
+- story: ask about employment schemes
+  steps:
+  - intent: ask_employment_schemes
+  - action: utter_employment_schemes
+
+- story: ask about agriculture schemes
+  steps:
+  - intent: ask_agriculture_schemes
+  - action: utter_agriculture_schemes
+
+- story: ask about housing schemes
+  steps:
+  - intent: ask_housing_schemes
+  - action: utter_housing_schemes
+
+- story: greet and goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: thank and goodbye
+  steps:
+  - intent: thank
+  - action: utter_thank
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: income schemes with follow up
+  steps:
+  - intent: ask_income_schemes
+  - action: action_recommend_income_schemes
+  - intent: ask_documents
+  - action: utter_documents_general
+
+- story: scheme details inquiry
+  steps:
+  - intent: ask_scheme_details
+  - action: action_get_scheme_details
+
+- story: education schemes with details
+  steps:
+  - intent: ask_education_schemes
+  - action: utter_education_schemes
+  - intent: ask_scheme_details
+  - action: action_get_scheme_details
+
+- story: health schemes with application
+  steps:
+  - intent: ask_health_schemes
+  - action: utter_health_schemes
+  - intent: ask_application_process
+  - action: utter_application_process
+
+- story: provide income after being asked
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_income
+  - intent: provide_income
+  - action: action_recommend_income_schemes

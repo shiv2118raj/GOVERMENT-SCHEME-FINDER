@@ -1,0 +1,25 @@
+// src/components/index.js
+export { default as LoginPage } from './loginpage';
+export { default as HomePage } from './HomePage';
+export { default as TubelightNavbarDemo } from './TubelightNavbarDemo';
+export { default as SchemesPage } from './SchemesPage';
+export { default as DocumentsPage } from './DocumentsPage';
+export { default as RecommendationsPage } from './RecommendationsPage';
+export { default as ApplicationsPage } from './ApplicationsPage';
+export { default as SchemeTracking } from './SchemeTracking';
+export { default as ApplyPage } from './ApplyPage';
+export { default as ChatBot } from './ChatBot';
+export { default as AdminApplicationsPage } from './AdminApplicationsPage';
+export { default as AdminUsersPage } from './AdminUsersPage';
+export { default as AdminDashboard } from './AdminDashboard';
+export { default as ApplicationTrackingPage } from './ApplicationTrackingPage';
+export { default as AdminDocumentsPage } from './AdminDocumentsPage';
+export { default as ApplicationReviewPage } from './ApplicationReviewPage';
+export { default as UserDashboard } from './UserDashboard';
+export { default as SchemeComparison } from './SchemeComparison';
+export { default as LanguageSwitcher } from './LanguageSwitcher';
+export { default as FAQSection } from './FAQSection';
+export { default as Notifications } from './Notifications';
+export { default as ThemeToggle } from './ThemeToggle';
+export { default as AdminApplicationDetailsPage } from './AdminApplicationDetailsPage';
+export { default as SchemeApprovalPage } from './SchemeApprovalPage';

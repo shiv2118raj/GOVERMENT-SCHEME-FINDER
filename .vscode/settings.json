@@ -1,0 +1,25 @@
+{
+  // Auto-import suggestions
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+
+  // Auto add missing imports + organize imports on save
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // ESLint integration
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.workingDirectories": ["frontend"],
+
+  // Enable format on save
+  "editor.formatOnSave": true,
+
+  // Quick suggestions for better IntelliSense
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}

@@ -1,0 +1,198 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_income_schemes
+  - ask_documents
+  - ask_eligibility
+  - ask_application_process
+  - ask_education_schemes
+  - ask_health_schemes
+  - ask_employment_schemes
+  - ask_agriculture_schemes
+  - ask_housing_schemes
+  - provide_income
+  - ask_scheme_details
+  - thank
+
+entities:
+  - income_amount
+  - income_unit
+  - scheme_name
+  - document_type
+  - age
+  - state
+  - category
+
+slots:
+  income_amount:
+    type: float
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: income_amount
+  
+  income_unit:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: income_unit
+  
+  user_state:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: state
+  
+  user_age:
+    type: float
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: age
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm Scheme Genie, your AI assistant for government schemes. How can I help you find the right schemes today? 🏛️"
+  
+  utter_goodbye:
+  - text: "Goodbye! Remember, there are many government schemes waiting for you. Come back anytime to explore more benefits! 👋"
+  
+  utter_ask_income:
+  - text: "To provide personalized scheme recommendations, could you tell me your annual income? (e.g., 2 LPA, 5 lakhs, etc.)"
+  
+  utter_documents_general:
+  - text: |
+      📄 **Common Documents Required for Government Schemes:**
+      
+      🆔 **Identity & Address Proof:**
+      • Aadhaar Card (mandatory for most schemes)
+      • Voter ID Card
+      • Passport
+      • Driving License
+      
+      💰 **Income Documents:**
+      • Income Certificate from Tehsildar
+      • Salary Certificate (for employed)
+      • ITR/Form 16 (for taxpayers)
+      • BPL Card (if applicable)
+      
+      🏛️ **Category Certificates:**
+      • Caste Certificate (SC/ST/OBC)
+      • EWS Certificate (Economically Weaker Section)
+      • Disability Certificate (if applicable)
+      
+      🏦 **Banking:**
+      • Bank Account Details
+      • Cancelled Cheque
+      • Passbook copy
+      
+      Which specific scheme are you interested in? I can provide exact requirements!
+  
+  utter_eligibility_info:
+  - text: |
+      To check scheme eligibility, I need some details:
+      • Your age
+      • Annual income
+      • State/location
+      • Category (if applicable)
+      
+      You can also use our 'Get AI Recommendations' feature for personalized results!
+  
+  utter_application_process:
+  - text: |
+      📝 **How to Apply for Government Schemes:**
+      
+      1️⃣ **Browse Schemes** - Explore available schemes on our platform
+      2️⃣ **Check Eligibility** - Verify you meet the criteria
+      3️⃣ **Gather Documents** - Collect required paperwork
+      4️⃣ **Submit Application** - Apply online through official portals
+      
+      Which scheme are you interested in applying for?
+  
+  utter_education_schemes:
+  - text: |
+      📚 **Popular Education Schemes:**
+      
+      • **PM Scholarship Scheme** - For students
+      • **Sarva Shiksha Abhiyan** - Primary education support
+      • **Mid Day Meal Scheme** - Nutrition support for students
+      • **National Scholarship Portal** - Various scholarships
+      
+      Would you like detailed information about any of these?
+  
+  utter_health_schemes:
+  - text: |
+      🏥 **Key Healthcare Schemes:**
+      
+      • **Ayushman Bharat** - Health insurance up to ₹5 lakh
+      • **PM Suraksha Bima Yojana** - Accident insurance
+      • **Janani Suraksha Yojana** - Maternal health support
+      • **Rashtriya Swasthya Bima Yojana** - Health insurance for BPL families
+      
+      Which healthcare scheme interests you most?
+  
+  utter_employment_schemes:
+  - text: |
+      💼 **Employment & Skill Development Schemes:**
+      
+      • **PMKVY** - Skill development training with certification
+      • **MGNREGA** - Rural employment guarantee (100 days)
+      • **Startup India** - Support for entrepreneurs
+      • **Stand Up India** - Loans for SC/ST/Women entrepreneurs
+      
+      Tell me about your background for personalized recommendations!
+  
+  utter_agriculture_schemes:
+  - text: |
+      🌾 **Agriculture Schemes for Farmers:**
+      
+      • **PM-KISAN** - Direct income support (₹6,000/year)
+      • **PM Fasal Bima Yojana** - Crop insurance
+      • **Soil Health Card Scheme** - Free soil testing
+      • **Kisan Credit Card** - Agricultural credit
+      
+      Are you a farmer looking for specific support?
+  
+  utter_housing_schemes:
+  - text: |
+      🏠 **Housing Assistance Schemes:**
+      
+      • **PMAY-Urban** - Housing for urban poor
+      • **PMAY-Gramin** - Rural housing assistance
+      • **Credit Linked Subsidy** - Interest subsidy on home loans
+      • **Affordable Housing** - Various state schemes
+      
+      What's your housing requirement?
+  
+  utter_thank:
+  - text: "You're welcome! I'm here to help you navigate government schemes. Feel free to ask if you need more assistance! 😊"
+  
+  utter_default:
+  - text: "I'm here to help you with government schemes. You can ask me about eligibility, documents, application process, or specific scheme categories like education, health, employment, etc."
+
+actions:
+  - action_recommend_income_schemes
+  - action_get_scheme_details
+  - utter_greet
+  - utter_goodbye
+  - utter_ask_income
+  - utter_documents_general
+  - utter_eligibility_info
+  - utter_application_process
+  - utter_education_schemes
+  - utter_health_schemes
+  - utter_employment_schemes
+  - utter_agriculture_schemes
+  - utter_housing_schemes
+  - utter_thank
+  - utter_default
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

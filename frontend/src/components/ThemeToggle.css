@@ -1,0 +1,113 @@
+.theme-toggle {
+  position: relative;
+  width: 56px;
+  height: 28px;
+  border-radius: 14px;
+  border: none;
+  background: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  padding: 2px;
+}
+
+.theme-toggle:hover {
+  background: var(--muted-foreground);
+}
+
+.theme-toggle:focus {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.theme-toggle.light {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.theme-toggle.dark {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+.theme-toggle-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle.dark .theme-toggle-thumb {
+  transform: translateX(28px);
+  background: #2d3748;
+}
+
+.theme-icon {
+  width: 16px;
+  height: 16px;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle.light .theme-icon {
+  color: #f59e0b;
+}
+
+.theme-toggle.dark .theme-icon {
+  color: #e2e8f0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 48px;
+    height: 24px;
+  }
+
+  .theme-toggle-thumb {
+    width: 20px;
+    height: 20px;
+  }
+
+  .theme-toggle.dark .theme-toggle-thumb {
+    transform: translateX(24px);
+  }
+
+  .theme-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    width: 44px;
+    height: 22px;
+  }
+
+  .theme-toggle-thumb {
+    width: 18px;
+    height: 18px;
+  }
+
+  .theme-toggle.dark .theme-toggle-thumb {
+    transform: translateX(22px);
+  }
+
+  .theme-icon {
+    width: 12px;
+    height: 12px;
+  }
+}

@@ -1,0 +1,230 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+    - hi there
+    - hello there
+    - greetings
+    - namaste
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - see you later
+    - talk to you later
+    - bye bye
+    - farewell
+    - take care
+    - see you
+    - catch you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - sure
+    - of course
+    - that sounds good
+    - correct
+    - right
+    - absolutely
+    - definitely
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - I don't think so
+    - no thanks
+    - not interested
+    - never mind
+    - not now
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thank you so much
+    - thanks a lot
+    - appreciate it
+    - much appreciated
+    - grateful
+
+- intent: ask_income_schemes
+  examples: |
+    - my salary is [2](income_amount) [lpa](income_unit) is there any scheme to help me
+    - I earn [5](income_amount) [lakhs](income_unit) per year, what benefits can I get
+    - my income is [3](income_amount) [lpa](income_unit), which schemes am I eligible for
+    - I make [50000](income_amount) per month, any schemes for me
+    - family income is [4](income_amount) [lakhs](income_unit), need financial help
+    - earning [1.5](income_amount) [lpa](income_unit), what government schemes available
+    - my annual income is [6](income_amount) [lpa](income_unit), suggest schemes
+    - I have low income, what schemes can help
+    - need financial assistance schemes
+    - schemes for low income families
+    - government benefits for my income level
+
+- intent: provide_income
+  examples: |
+    - my income is [2](income_amount) [lpa](income_unit)
+    - I earn [5](income_amount) [lakhs](income_unit) annually
+    - [3](income_amount) [lpa](income_unit)
+    - my salary is [4](income_amount) [lakhs](income_unit) per year
+    - [50000](income_amount) per month
+    - around [2.5](income_amount) [lpa](income_unit)
+    - approximately [6](income_amount) [lakhs](income_unit)
+
+- intent: ask_documents
+  examples: |
+    - what documents are required
+    - what are the requirements for documents for any scheme
+    - what documents do I need
+    - document requirements
+    - what papers are needed
+    - required documents for schemes
+    - what paperwork is needed
+    - documentation needed
+    - which documents should I prepare
+    - list of required documents
+    - what certificates do I need
+    - document checklist
+
+- intent: ask_eligibility
+  examples: |
+    - am I eligible for schemes
+    - how to check eligibility
+    - what are the eligibility criteria
+    - eligibility requirements
+    - who can apply for schemes
+    - qualification criteria
+    - how do I know if I qualify
+    - eligibility conditions
+    - what makes me eligible
+    - criteria for schemes
+
+- intent: ask_application_process
+  examples: |
+    - how to apply for schemes
+    - application process
+    - how do I apply
+    - steps to apply
+    - application procedure
+    - how to submit application
+    - where to apply
+    - application steps
+    - how to register
+    - application method
+
+- intent: ask_education_schemes
+  examples: |
+    - education schemes
+    - schemes for students
+    - scholarship schemes
+    - educational benefits
+    - student schemes
+    - education assistance
+    - study schemes
+    - academic schemes
+    - school schemes
+    - college schemes
+
+- intent: ask_health_schemes
+  examples: |
+    - health schemes
+    - healthcare benefits
+    - medical schemes
+    - health insurance schemes
+    - hospital schemes
+    - medical assistance
+    - healthcare programs
+    - health benefits
+    - medical benefits
+    - treatment schemes
+
+- intent: ask_employment_schemes
+  examples: |
+    - employment schemes
+    - job schemes
+    - skill development schemes
+    - training schemes
+    - work schemes
+    - employment programs
+    - job training
+    - skill programs
+    - career schemes
+    - livelihood schemes
+
+- intent: ask_agriculture_schemes
+  examples: |
+    - agriculture schemes
+    - farmer schemes
+    - farming benefits
+    - agricultural programs
+    - schemes for farmers
+    - crop schemes
+    - farming assistance
+    - agricultural benefits
+    - rural schemes
+    - kisan schemes
+
+- intent: ask_housing_schemes
+  examples: |
+    - housing schemes
+    - home schemes
+    - house schemes
+    - housing benefits
+    - home loan schemes
+    - housing assistance
+    - shelter schemes
+    - residential schemes
+    - property schemes
+    - housing programs
+
+- intent: ask_scheme_details
+  examples: |
+    - tell me about [PM-KISAN](scheme_name)
+    - details of [Ayushman Bharat](scheme_name)
+    - what is [PMKVY](scheme_name)
+    - information about [PMAY](scheme_name)
+    - [PM Scholarship](scheme_name) scheme details
+    - how does [MGNREGA](scheme_name) work
+    - explain [Startup India](scheme_name)
+    - [Jan Aushadhi](scheme_name) scheme info
+
+lookup: income_unit
+  examples: |
+    - lpa
+    - lakhs
+    - crores
+    - thousands
+    - per annum
+    - annually
+    - yearly
+    - per year
+
+lookup: scheme_name
+  examples: |
+    - PM-KISAN
+    - Ayushman Bharat
+    - PMKVY
+    - PMAY
+    - PM Scholarship
+    - MGNREGA
+    - Startup India
+    - Jan Aushadhi
+    - PMSBY
+    - PMJJBY
+    - Sarva Shiksha Abhiyan
+
+regex: income_amount
+  examples: |
+    - [0-9]+(\.[0-9]+)?

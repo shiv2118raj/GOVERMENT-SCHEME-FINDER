@@ -1,0 +1,211 @@
+/* === Scheme Seva Full Styling === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #0d0a2b, #000);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(20, 20, 40, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.logo span {
+  color: #6c63ff;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+.navbar nav a:hover {
+  color: #6c63ff;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+.nav-actions input {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  margin-right: 10px;
+}
+.register {
+  background: linear-gradient(45deg, #6c63ff, #9f7aea);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  padding: 80px 60px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #6c63ff, #9f7aea);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hero-content p {
+  margin: 20px 0;
+  color: #bbb;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+button.primary {
+  background: linear-gradient(45deg, #6c63ff, #9f7aea);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+button.secondary {
+  border: 1px solid #6c63ff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: transparent;
+  color: #6c63ff;
+  cursor: pointer;
+}
+.stats {
+  display: flex;
+  gap: 30px;
+  color: #ccc;
+}
+
+.hero-image img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+/* Popular Schemes Section */
+.section {
+  padding: 60px;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.scheme-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s, background 0.3s;
+}
+.scheme-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.08);
+}
+.scheme-card button {
+  margin-top: 15px;
+  background: linear-gradient(45deg, #6c63ff, #9f7aea);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Categories */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.category-card {
+  background: linear-gradient(45deg, #3b3a5a, #2a2950);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(90deg, #6c63ff, #9f7aea);
+  border-radius: 20px;
+  margin: 60px;
+}
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #0a0a20;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer h3 span {
+  color: #6c63ff;
+}
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+.footer-links a {
+  display: block;
+  color: #aaa;
+  margin-top: 8px;
+  text-decoration: none;
+}
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}

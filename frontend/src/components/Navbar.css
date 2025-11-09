@@ -1,0 +1,140 @@
+/* Navbar.css */
+.navbar {
+  background: linear-gradient(90deg, #4f8cfb 0%, #38f9d7 100%);
+  box-shadow: 0 4px 16px rgba(80, 109, 206, 0.12);
+  border-radius: 16px;
+  margin: 22px 16px;
+  padding: 0 2vw;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-icon {
+  font-size: 2.1rem;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.16s;
+}
+.navbar-link:hover {
+  background: rgba(255, 255, 255, 0.17);
+  color: #222;
+}
+
+.navbar-btn {
+  border: none;
+  background: #fff;
+  color: #3366ff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 22px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s;
+  text-decoration: none;
+}
+.navbar-btn:hover, .logout-btn:hover {
+  background: #eaf6fe;
+  color: #194293;
+}
+
+.logout-btn {
+  background: linear-gradient(90deg, #e53935 60%, #e35d5b 90%);
+  color: #fff;
+  margin-right: 12px;
+}
+.logout-btn:hover {
+  background: #bc222b;
+  color: #fff;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 20;
+}
+.navbar-toggle span {
+  width: 27px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+  transition: 0.2s;
+}
+
+@media (max-width: 900px) {
+  .navbar-menu {
+    position: absolute;
+    right: 3vw;
+    top: 68px;
+    background: linear-gradient(90deg, #4f8cfb 80%, #38f9d7 100%);
+    box-shadow: 0 2px 8px rgba(38, 44, 74, 0.16);
+    border-radius: 13px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    min-width: 190px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.97;
+  }
+  .navbar-menu.active {
+    max-height: 700px;
+    padding: 18px 24px 14px 20px;
+    opacity: 1;
+    z-index: 15;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    margin: 11px 0;
+    border-radius: 0 0 16px 16px;
+  }
+  .navbar-logo {
+    font-size: 1rem;
+  }
+}
